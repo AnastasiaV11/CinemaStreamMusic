@@ -32,7 +32,8 @@ async def start(client, message):
                 InlineKeyboardButton("❔ INSTRUCȚIUNI ❔", callback_data="help"),
             ],
             [
-                InlineKeyboardButton("📢 Grup", url=f"https://t.me/{UPDATES_CHANNEL}"),
+                InlineKeyboardButton("📢 RomaniaDeep", url=f"https://t.me/pixeldeep"),
+                InlineKeyboardButton("📢 Vamos", url=f"https://t.me/Vamos2022"),
                 InlineKeyboardButton("📢 Uniunea", url=f"https://t.me/uniunea"),
             ],
             [
@@ -92,7 +93,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton("❔ INSTRUCȚIUNI ❔", callback_data="help"),
             ],
             [
-                InlineKeyboardButton("📢 Grup", url=f"https://t.me/{UPDATES_CHANNEL}"),
+                InlineKeyboardButton("📢 RomaniaDeep", url=f"https://t.me/pixeldeep"),
+                InlineKeyboardButton("📢 Vamos", url=f"https://t.me/Vamos2022"),
                 InlineKeyboardButton("📢 Uniunea", url=f"https://t.me/uniunea"),
             ],
             [
