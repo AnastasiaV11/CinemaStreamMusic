@@ -41,7 +41,7 @@ async def search(client, query):
         answers.append(
             InlineQueryResultArticle(
                 title="Vamos",
-                input_message_content=InputTextMessageContent(f"{REPLY_MESSAGE}\n\n<b>© Creat de : \nAnastasiaV | Spt 👑</b>", disable_web_page_preview=True),
+                input_message_content=InputTextMessageContent(f"{REPLY_MESSAGE}\n\n<b>© Creat de : \nAnastasiaV | SPT 👑</b>", disable_web_page_preview=True),
                 reply_markup=InlineKeyboardMarkup(buttons)
                 )
             )
