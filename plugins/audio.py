@@ -17,7 +17,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQ
 @Client.on_message(filters.command(["play", f"play@{USERNAME}"]) & filters.group & ~filters.edited)
 @authorized_users_only
 async def play(client, m: Message):
-    msg = await m.reply_text("🔄 `Processing ...`")
+    msg = await m.reply_text("🔄 `Se descarcă ...`")
     chat_id = m.chat.id
     media = m.reply_to_message
     if not media and not ' ' in m.text:
@@ -50,16 +50,16 @@ async def play(client, m: Message):
         if vid_call:
             await VIDEO_CALL[chat_id].stop()
             VIDEO_CALL.pop(chat_id)
-            await sleep(3)
+            await sleep(0)
 
         aud_call = AUDIO_CALL.get(chat_id)
         if aud_call:
             await AUDIO_CALL[chat_id].stop()
             AUDIO_CALL.pop(chat_id)
-            await sleep(3)
+            await sleep(0)
 
         try:
-            await sleep(2)
+            await sleep(0)
             await group_call.join(chat_id)
             await group_call.start_audio(link, repeat=False)
             AUDIO_CALL[chat_id] = group_call
@@ -95,16 +95,16 @@ async def play(client, m: Message):
         if vid_call:
             await VIDEO_CALL[chat_id].stop()
             VIDEO_CALL.pop(chat_id)
-            await sleep(3)
+            await sleep(0)
 
         aud_call = AUDIO_CALL.get(chat_id)
         if aud_call:
             await AUDIO_CALL[chat_id].stop()
             AUDIO_CALL.pop(chat_id)
-            await sleep(3)
+            await sleep(0)
 
         try:
-            await sleep(2)
+            await sleep(0)
             await group_call.join(chat_id)
             await group_call.start_audio(audio, repeat=False)
             AUDIO_CALL[chat_id] = group_call
