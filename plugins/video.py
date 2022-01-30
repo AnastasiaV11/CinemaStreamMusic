@@ -49,13 +49,13 @@ group_call = GroupCallFactory(User, GroupCallFactory.MTPROTO_CLIENT_TYPE.PYROGRA
 async def pause_callbacc(client, CallbackQuery):
     chat_id = CallbackQuery.message.chat.id
     if chat_id in AUDIO_CALL:
-        text = f"⏸ Paused !"
+        text = f"⏸ Pauză !"
         await AUDIO_CALL[chat_id].set_audio_pause(True)
     elif chat_id in VIDEO_CALL:
-        text = f"⏸ Paused !"
+        text = f"⏸ Pauză !"
         await VIDEO_CALL[chat_id].set_video_pause(True)
     else:
-        text = f"❌ Nothing is Playing !"
+        text = f"❌ Nimic nu rulează !"
     await Client.answer_callback_query(
         CallbackQuery.id, text, show_alert=True
     )
@@ -64,13 +64,13 @@ async def pause_callbacc(client, CallbackQuery):
 async def resume_callbacc(client, CallbackQuery):
     chat_id = CallbackQuery.message.chat.id
     if chat_id in AUDIO_CALL:
-        text = f"▶️ Resumed !"
+        text = f"▶️ Reluat !"
         await AUDIO_CALL[chat_id].set_audio_pause(False)
     elif chat_id in VIDEO_CALL:
-        text = f"▶️ Resumed !"
+        text = f"▶️ Reluat !"
         await VIDEO_CALL[chat_id].set_video_pause(False)
     else:
-        text = f"❌ Nothing is Playing !"
+        text = f"❌ Nimic nu rulează !"
     await Client.answer_callback_query(
         CallbackQuery.id, text, show_alert=True
     )
@@ -80,11 +80,11 @@ async def resume_callbacc(client, CallbackQuery):
 async def end_callbacc(client, CallbackQuery):
     chat_id = CallbackQuery.message.chat.id
     if chat_id in AUDIO_CALL:
-        text = f"⏹️ Stopped !"
+        text = f"⏹️ Oprit !"
         await AUDIO_CALL[chat_id].stop()
         AUDIO_CALL.pop(chat_id)
     elif chat_id in VIDEO_CALL:
-        text = f"⏹️ Stopped !"
+        text = f"⏹️ Oprit !"
         await VIDEO_CALL[chat_id].stop()
         VIDEO_CALL.pop(chat_id)
     else:
