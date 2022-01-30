@@ -142,16 +142,16 @@ async def stream(client, m: Message):
         if vid_call:
             await VIDEO_CALL[chat_id].stop()
             VIDEO_CALL.pop(chat_id)
-            await sleep(3)
+            await sleep(0)
 
         aud_call = AUDIO_CALL.get(chat_id)
         if aud_call:
             await AUDIO_CALL[chat_id].stop()
             AUDIO_CALL.pop(chat_id)
-            await sleep(3)
+            await sleep(0)
 
         try:
-            await sleep(2)
+            await sleep(0)
             await group_call.join(chat_id)
             await group_call.start_video(link, with_audio=True, repeat=False)
             VIDEO_CALL[chat_id] = group_call
@@ -196,16 +196,16 @@ async def stream(client, m: Message):
         if vid_call:
             await VIDEO_CALL[chat_id].stop()
             VIDEO_CALL.pop(chat_id)
-            await sleep(3)
+            await sleep(0)
 
         aud_call = AUDIO_CALL.get(chat_id)
         if aud_call:
             await AUDIO_CALL[chat_id].stop()
             AUDIO_CALL.pop(chat_id)
-            await sleep(3)
+            await sleep(0)
 
         try:
-            await sleep(2)
+            await sleep(0)
             await group_call.join(chat_id)
             await group_call.start_video(video, with_audio=True, repeat=False)
             VIDEO_CALL[chat_id] = group_call
@@ -317,6 +317,6 @@ async def audio_ended_handler(_, __):
 
 @group_call.on_video_playout_ended
 async def video_ended_handler(_, __):
-    await sleep(3)
+    await sleep(0)
     await group_call.stop()
     print(f"[INFO] - VIDEO_CALL ENDED !")
