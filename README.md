@@ -12,7 +12,7 @@
 [![Bot Updates](https://img.shields.io/badge/VideoPlayerBot-Updates%20Channel-green)](https://t.me/AsmSafone)
 [![Bot Support](https://img.shields.io/badge/VideoPlayerBot-Support%20Group-blue)](https://t.me/safothebot)
 
-An Telegram Bot By [@AsmSafone](https://t.me/AsmSafone) To Stream Videos in Telegram Voice Chat.
+An Telegram Bot By AnastasiV To Stream Videos in Telegram Voice Chat.
 
 ## Main Features
 
@@ -62,8 +62,8 @@ endstream - Stop Streaming & Left VC
 
 ## Self Host
 ```sh
-$ git clone -b main https://github.com/AsmSafone/VideoPlayerBot
-$ cd VideoPlayerBot
+$ git clone -b main https://github.com/AnastasiaV11/CinemaStreamMusic
+$ cd CinemaStreamMusic
 $ sudo apt-get install python3-pip ffmpeg
 $ pip3 install -U pip
 $ pip3 install -U -r requirements.txt
@@ -74,7 +74,7 @@ $ python3 main.py
 ## License
 ```sh
 VideoPlayerBot, Telegram Video Chat Bot
-Copyright (c) 2021  Asm Safone <https://github.com/AsmSafone>
+Copyright (c) 2021  AnastasiaV
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published by
@@ -90,9 +90,7 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>
 ```
 
-## Credits
 
-- [Me](https://github.com/AsmSafone) for [Noting](https://github.com/AsmSafone/VideoPlayerBot) 😬
 - [Dan](https://github.com/delivrance) for [Pyrogram](https://github.com/pyrogram/pyrogram) ❤️
 - [MarshalX](https://github.com/MarshalX) for [pytgcalls](https://github.com/MarshalX/tgcalls) ❤️
 - And Thanks To All [Contributors](https://github.com/AsmSafone/VideoPlayerBot/graphs/contributors)! ❤️
